@@ -3,7 +3,7 @@
 
 To clone:
 
-        git clone https://github.com/wasit7/cs402
+        git clone https://github.com/sarunya-w/CS402-PROJECT
 
 To reset all local files and pull:
 
