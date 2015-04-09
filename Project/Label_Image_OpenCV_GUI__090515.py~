@@ -107,7 +107,7 @@ if __name__ == '__main__':
 		img2 = cv2.imread(os.path.join(root,temp),cv2.IMREAD_GRAYSCALE)
 
 		cv2.namedWindow(WINDOW_NAME)
-                #cv2.namedWindow(WINDOW2_NAME)
+                cv2.namedWindow(WINDOW2_NAME)
                 
                 cv2.createTrackbar('Size',WINDOW_NAME,5,20, nothing)
 		cv2.setMouseCallback(WINDOW_NAME,draw_circle)
