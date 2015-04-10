@@ -7,7 +7,6 @@ Created on Sun Apr 09 21:19:50 2015
 import cv2
 import os
 import numpy as np
-import copy
 
 WINDOW_NAME = "Label image"
 #WINDOW2_NAME = "Temp"
@@ -101,7 +100,7 @@ if __name__ == '__main__':
                 all_img.append(f)
                 temp = all_img.pop()
 		img_name = os.path.basename(os.path.join(root,temp))
-	
+		
 		print "--labeling image : " , img_name
 		img = cv2.imread(os.path.join(root,temp),cv2.IMREAD_COLOR)
 		img2 = cv2.imread(os.path.join(root,temp),cv2.IMREAD_GRAYSCALE)
@@ -150,7 +149,8 @@ if __name__ == '__main__':
         		print "you pressed esc"
 			break
     		    elif k == ord('s'): # wait for 's' key to save and exit
-		        cv2.imwrite("_d" + img_name,img2)
+			file_name = img_name.split(".")
+			cv2.imwrite("_d"+file_name[0]+".bmp",img2)
         		cv2.destroyAllWindows()
     		        print "you pressed save "
 			break        	        
