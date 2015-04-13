@@ -12,6 +12,7 @@ Cnow = -1
 ix,iy = -1,-1
 i = 0
 type_name = ".bmp"
+exit = 0
 
 
 def nothing(x):
@@ -199,15 +200,9 @@ if __name__ == '__main__':
                         Cnow=9 #case '-': cout<<"class null(256)"<<endl; Cnow=255; break;
                     elif k == ord('-'):
                         print " No class "
-                        Cnow=10 #case '-': cout<<"class null(256)"<<endl; Cnow=255; break;
-                    #elif k == ord('a'): # wait for ESC key to exit
-                    #   #a = raw_input('What is your class name ? (xxxx .sp)')
-                    #   x = input('What is your class name ? (xxxx .sp)') 
-                    #   Cnow = Cnow + 1
-                    #   print ("Your class is " + Cnow +" - " + x)                  
-                    elif k == 27: # wait for ESC key to exit
+                        Cnow=10                 
+                    elif k == ord('q'): # wait for ESC key to exit
                         cv2.destroyAllWindows()
-                        print "you pressed esc"
                         break
                     elif k == ord('s'): # wait for 's' key to save and exit
                         file_name = img_name.split(".")
@@ -218,6 +213,12 @@ if __name__ == '__main__':
                         #"%02d"%(i)+ "_"+ 
                         print "you pressed save  " + file_name[0] + type_name + "  ( " + img_name + " )\n"
                         break
+                    elif k == 27:
+                        print "you pressed esc"
+                        exit = 1
+                        break
 
                 Cnow = -1
                 i = i+1
+                if exit == 1:
+                    break
