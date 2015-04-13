@@ -6,7 +6,6 @@ Created on Thu Mar 12 00:01:08 2015
 """
 from PIL import Image
 from matplotlib import pyplot as plt
-import cv2
 #import numpy as np
 from scipy.ndimage import filters
 from pylab import *
@@ -87,18 +86,3 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-
-#TestOpenCV
-
-#import cv2
-#def main():
-#    windowname = "Hello OpenCV"
-#    img = cv2.imread("test.jpg") # your photo path
-#    cv2.imshow(windowname,img)
-#    cv2.waitKey(0)
-#    cv2.destroyWindow(windowname)
-#    pass
-#
-#if __name__ == '__main__':
-#    main()
