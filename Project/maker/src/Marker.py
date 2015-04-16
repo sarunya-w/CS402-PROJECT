@@ -171,34 +171,34 @@ if __name__ == '__main__':
                     cv2.imshow(WINDOW_NAME,img)
                     k = cv2.waitKey(0)
                     if k == ord('0'):
-                        print "class: 0 - Oscillatoria sp."
+                        print "class: 0 - Anabaena sp."
                         Cnow = 0
                     elif k == ord('1'):
-                        print "class: 1 - Chlorella sp."
+                        print "class: 1 - Coelomoron sp."
                         Cnow = 1
                     elif k == ord('2'):
-                        print "class: 2 - Closterium sp."
+                        print "class: 2 - Oscillatoria sp."
                         Cnow = 2
                     elif k == ord('3'):
-                        print "class: 3 - Anabaena sp."
+                        print "class: 3 - Actinastrum sp."
                         Cnow=3
                     elif k == ord('4'):
-                        print "class: 4 - Melosira sp."
+                        print "class: 4 - Closteriopsis sp."
                         Cnow=4
                     elif k == ord('5'):
-                        print "class: 5 - Cyclotella sp."
+                        print "class: 5 - Pediasprum sp. "
                         Cnow=5
                     elif k == ord('6'):
-                        print "class: 6 - Actinastrum sp."
+                        print "class: 6 - Scenedesnus sp."
                         Cnow=6
                     elif k == ord('7'):
-                        print "class: 7 - Ankistrodesmus sp."
+                        print "class: 7 - Triplastrum sp."
                         Cnow=7
                     elif k == ord('8'):
-                        print "class: 8 - Synedra sp."
+                        print "class: 8 - Lepocinclis sp.."
                         Cnow=8
                     elif k == ord('9'):
-                        print "class: 9 - Nitzschia sp."
+                        print "class: 9 - Cyclotella sp."
                         Cnow=9 #case '-': cout<<"class null(256)"<<endl; Cnow=255; break;
                     elif k == ord('-'):
                         print " No class "
