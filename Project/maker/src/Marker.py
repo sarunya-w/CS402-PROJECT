@@ -1,4 +1,5 @@
 import cv2
+import cv2.cv as cv
 import os
 import numpy as np
 import copy
@@ -12,6 +13,7 @@ Cnow = -1
 ix,iy = -1,-1
 i = 0
 type_name = ".bmp"
+target = "bmp/"
 exit = 0
 
 
@@ -157,14 +159,14 @@ if __name__ == '__main__':
                 img_class = os.path.basename(os.path.join(root,temp))
                 #print "--- labeling image : " , img_class
 
-                cv2.namedWindow(WINDOW_NAME)
+                cv2.namedWindow(WINDOW_NAME,cv.CV_WINDOW_NORMAL)
                 #cv2.namedWindow(WINDOW2_NAME)
 
 
                 cv2.createTrackbar('Size',WINDOW_NAME,5,20, nothing)
                 cv2.setMouseCallback(WINDOW_NAME,draw_circle)
                 #cv2.setMouseCallback(WINDOW2_NAME, draw_null)
-
+                h,w = img.shape[:2]
                 while(1):
                     cv2.imshow(WINDOW_NAME,img)
                     k = cv2.waitKey(0)
@@ -207,7 +209,7 @@ if __name__ == '__main__':
                     elif k == ord('s'): # wait for 's' key to save and exit
                         file_name = img_name.split(".")
                         for root,dirs,files in os.walk(rootdir):
-                            cv2.imwrite(os.path.join(root, file_name[0] + type_name) , img2 )
+                            cv2.imwrite(os.path.join(root,target + file_name[0] + type_name) , img2 )
                             break
                         cv2.destroyAllWindows()
                         #"%02d"%(i)+ "_"+ 
