@@ -53,7 +53,7 @@ def onpress(event):
 #    
 #    for root,dirs,files in os.walk(rootdir):
 #        for f in files:
-#            if f.endswith('jpg') or f.endswith('JPG'):
+#            if f.endswith('jpg') or f.endswxxxxxxxxxxxxzxith('JPG'):
 #                im = Image.open(os.path.join(root,f))
 #                im = im.convert('LA')
 #                # save image
@@ -71,15 +71,15 @@ def onpress(event):
     
 if __name__ == "__main__":
     rootdir = 'dataset'
-    fig=plt.figure()
+#    fig=plt.figure()
     for root,dirs,files in os.walk(rootdir):
         for f in files:
             if f.endswith('jpg') or f.endswith('JPG'):   
                 file_list.append(f)
     
     
-    fig.canvas.mpl_connect('motion_notify_event', onclick)
-    fig.canvas.mpl_connect('key_press_event', onpress)
+#    fig.canvas.mpl_connect('motion_notify_event', onclick)
+#    fig.canvas.mpl_connect('key_press_event', onpress)
     nextImage()
 #    for root,dirs,files in os.walk(rootdir):
 #        for f in files:
