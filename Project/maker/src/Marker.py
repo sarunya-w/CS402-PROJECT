@@ -1,5 +1,9 @@
 import cv2
+<<<<<<< HEAD
 #import cv2.cv as cv
+=======
+import cv2.cv as cv
+>>>>>>> 5d34e46e54c150ea2393e22e80c190ed3b69daa1
 import os
 import numpy as np
 import copy
@@ -157,7 +161,11 @@ if __name__ == '__main__':
                 img_class = os.path.basename(os.path.join(root,temp))
                 #print "--- labeling image : " , img_class
 
+<<<<<<< HEAD
                 cv2.namedWindow(WINDOW_NAME)
+=======
+                cv2.namedWindow(WINDOW_NAME,cv.CV_WINDOW_NORMAL)
+>>>>>>> 5d34e46e54c150ea2393e22e80c190ed3b69daa1
                 #cv2.namedWindow(WINDOW2_NAME)
 
 
