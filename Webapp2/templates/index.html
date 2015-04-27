@@ -1,44 +1,40 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-
-<meta charset="utf-8">
+	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="SHORTCUT ICON" href="icon.jpg" />
 	<link rel="icon" href="icon.jpg" type="image/ico" />
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
-     <link href="static/css/dashboard.css" rel="stylesheet">
-
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="my_jquery_functions.js"></script>
 	<script src="static/js/bootstrap.min.js"></script>
 
-<meta http-equiv="Content-Script-Type" content="text/javascript" />
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8" />
-<meta name="robots" content="index, follow" />
-<meta name="keywords" content="" />
-<meta name="title" content="" />
-<meta name="description" content="" />
-<title>DETECT IMAGE</title>
-<link href="static/media/style000.css" rel="stylesheet" type="text/css" />
-<link href="static/media/inner000.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8;charset=utf-8" />
+	<title>DETECT IMAGE</title>
+	<link href="static/media/style000.css" rel="stylesheet" type="text/css" />
+	<link href="static/media/inner000.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="static/media/jquery-1.js"></script>
-<script type="text/javascript" src="static/media/cufon-yu.js"></script>
-<script type="text/javascript" src="static/media/Cicle_Se.js"></script>
-<script type="text/javascript">
-Cufon.replace('h1') ('h1 a') ('h2') ('h3') ('h4') ('h5') ('h6') ('.middle-text p');
-</script>
-<script type="text/javascript" src="static/media/jquery00.js"></script>
-<script type="text/javascript" src="static/media/contact0.js"></script>
-
-
+	<script type="text/javascript" src="static/media/jquery-1.js"></script>
+	<script type="text/javascript" src="static/media/cufon-yu.js"></script>
+	<script type="text/javascript">Cufon.replace('h1') ('h1 a') ('h2') ('h3') ('h4') ('h5') ('h6') ('.middle-text p');</script>
+	<script type="text/javascript" src="static/media/Cicle_Se.js"></script>
+	<script type="text/javascript" src="static/media/jquery00.js"></script>
+	<script type="text/javascript" src="static/media/contact0.js"></script>
+	<!-- popup -->
+	<script type="text/javascript" src="static/js/jquery.min.js"></script> 
+	<script type="text/javascript" src="static/js/jquery.scrollTo-min.js"></script> 
+	<script type="text/javascript" src="static/js/jquery.localscroll-min.js"></script> 
+	<script type="text/javascript" src="static/js/init.js"></script> 
+    <link rel="stylesheet" href="static/css/slimbox2.css" type="text/css" media="screen" /> 
+    <script type="text/JavaScript" src="static/js/slimbox2.js"></script>
+	
 </head>
 
 
 <body>
-
 
 	<!--form enctype="multipart/form-data" action="algae.php" method="POST"-->
 
@@ -56,29 +52,30 @@ Cufon.replace('h1') ('h1 a') ('h2') ('h3') ('h4') ('h5') ('h6') ('.middle-text p
 			<div id="maincontent ">
 				<h3 style="color:#333333; padding-left: 2em">DETECT ALGAE</h3>
 				<div id="">
-					<p style="padding-left: 5em"> การทำงาน : ระบบจะรับภาพที่ท่านเลือกเพื่อนำไปเปรียบเทียบกับตัวจำแนกในขั้นตอนการเรียนรู้ของเครื่อง เพื่อระบุคำอธิบาย (label) และแสดงผลระบุว่าตำแหน่งไหนในภาพที่เป็นสาหร่ายประเภทอะไร</p>
+					<p style="padding-left: 5em; font-size: 15px; "> การทำงาน : ระบบจะรับภาพที่ท่านเลือกเพื่อนำไปเปรียบเทียบกับตัวจำแนกในขั้นตอนการเรียนรู้ของเครื่อง เพื่อระบุคำอธิบาย (label) และแสดงผลระบุว่าตำแหน่งไหนในภาพที่เป็นสาหร่ายประเภทอะไร</p>
 
 			
 					
 					
 					
 					<div class="row">
-					<div class="col-md-6 "> <img src="{{input_img}}"  style="width:400px; height:300px " /></br></div>
-					<div class="col-md-6 "> <img src="{{output_img}}"  style="width:400px; height:300px " /></br></div></div>
+					<div id="home_gallery" class="box no_mr">
+						<div class="col-md-6 "> <a href="{{input_img}}" rel="lightbox[gallery]"><img src="{{input_img}}"  style="width:500px; height:400px " /></a></br></div>
+						<div class="col-md-6 "> <a href="{{output_img}}" rel="lightbox[gallery]"><img src="{{output_img}}"  style="width:500px; height:400px " /></a></br></div>
+					</div>
+					</div></br>
+					
 					<form action="" method=post enctype=multipart/form-data>
-      				<p><input type=file name=file>
-         			<input type=submit value=Upload>
+      				<p><input type=file name=file></br>
+         			<input type=submit value=Upload class="btn btn-primary">
     				</form>
     				</br>
-    				
-					<div class="row">{{status}} <div class="col-md-6 col-md-offset-5"></div>
-					
-					
+					<div class="row"><div class="col-md-6" >{{status}} </div>
+						<div class="col-md-6 col-md-offset-5"></div>
+					</div>	
 				</div>	
-			</div>	
-			
+			</div>
 		</div>
-	</div>
 	
 	
 
@@ -119,8 +116,8 @@ Cufon.replace('h1') ('h1 a') ('h2') ('h3') ('h4') ('h5') ('h6') ('.middle-text p
 
 </body>
 
-<!--
-<div style="text-align: center;">Copyright &copy; 2015. cs402_project. All rights reserved.</div>
--->
+
+<div style="text-align: center; color:#FFFFFF; background-color:#003366; margin-top: 25px; ">Copyright &copy; 2015. cs402_project. All rights reserved.</div>
+
 
 </html>
